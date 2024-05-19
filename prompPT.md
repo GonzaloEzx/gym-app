@@ -107,4 +107,101 @@ gym-app/
 ├── composer.json
 ├── README.md
 └── .env
+¡Perfecto! Vamos a definir una estructura de proyecto clara y organizada. Utilizaremos el patrón MVC (Modelo-Vista-Controlador) para mantener el código modular y fácil de mantener. Aquí te dejo una estructura de carpetas y archivos recomendada para tu aplicación CRUD en PHP:
 
+```
+gym-app/
+│
+├── public/
+│   ├── index.php
+│   ├── css/
+│   ├── js/
+│   └── images/
+│
+├── app/
+│   ├── controllers/
+│   │   ├── AuthController.php
+│   │   ├── ClientController.php
+│   │   └── DashboardController.php
+│   │
+│   ├── models/
+│   │   ├── Client.php
+│   │   ├── User.php
+│   │   └── Role.php
+│   │
+│   ├── views/
+│   │   ├── auth/
+│   │   │   ├── login.php
+│   │   │   ├── register.php
+│   │   ├── clients/
+│   │   │   ├── list.php
+│   │   │   ├── add.php
+│   │   │   ├── edit.php
+│   │   │   ├── delete.php
+│   │   ├── dashboards/
+│   │   │   ├── admin.php
+│   │   │   ├── owner.php
+│   │   └── layout/
+│   │       ├── header.php
+│   │       ├── footer.php
+│   │
+│   ├── core/
+│   │   ├── Router.php
+│   │   ├── Database.php
+│   │   ├── Controller.php
+│   │   ├── Model.php
+│   │   ├── View.php
+│   │
+│   └── config/
+│       ├── config.php
+│       ├── database.php
+│
+├── .gitignore
+├── composer.json
+├── README.md
+└── .env
+```
+
+### Descripción de las Carpetas y Archivos
+
+- **public/**: Contendrá los archivos accesibles públicamente como el archivo `index.php`, archivos CSS, JavaScript e imágenes.
+  - `index.php`: Punto de entrada de la aplicación.
+  - `css/`: Archivos de estilos CSS.
+  - `js/`: Archivos JavaScript.
+  - `images/`: Imágenes.
+
+- **app/**: Contendrá la lógica de la aplicación, organizada en controladores, modelos y vistas.
+  - **controllers/**: Controladores que manejarán las peticiones y coordinarán la lógica de negocio.
+    - `AuthController.php`: Maneja la autenticación de usuarios.
+    - `ClientController.php`: Maneja las operaciones CRUD de los clientes.
+    - `DashboardController.php`: Maneja la visualización de los dashboards.
+  - **models/**: Modelos que representan las entidades de la base de datos.
+    - `Client.php`: Modelo para los clientes.
+    - `User.php`: Modelo para los usuarios.
+    - `Role.php`: Modelo para los roles.
+  - **views/**: Plantillas de vista que renderizarán la interfaz de usuario.
+    - `auth/`: Plantillas relacionadas con la autenticación.
+    - `clients/`: Plantillas relacionadas con la gestión de clientes.
+    - `dashboards/`: Plantillas para los dashboards de admin y owner.
+    - `layout/`: Plantillas comunes como el encabezado y el pie de página.
+  - **core/**: Contendrá las clases básicas y utilitarias que soportan la arquitectura MVC.
+    - `Router.php`: Maneja el enrutamiento de las peticiones.
+    - `Database.php`: Maneja la conexión a la base de datos.
+    - `Controller.php`: Clase base para los controladores.
+    - `Model.php`: Clase base para los modelos.
+    - `View.php`: Clase base para las vistas.
+  - **config/**: Archivos de configuración.
+    - `config.php`: Configuraciones generales.
+    - `database.php`: Configuración de la base de datos.
+
+- **.gitignore**: Define qué archivos y carpetas deben ser ignorados por Git.
+- **composer.json**: Archivo para gestionar las dependencias PHP si decides usar Composer.
+- **README.md**: Documentación del proyecto.
+- **.env**: Archivo para variables de entorno (configuración sensible como credenciales).
+
+### Siguientes Pasos:
+
+1. **Crear la Estructura**: Crea las carpetas y archivos mencionados.
+2. **Configurar Autoloading con Composer**: Si decides usar Composer, configura el autoloading.
+3. **Definir Rutas Básicas**: Configura el enrutador básico en `Router.php`.
+4. **Configurar Base de Datos**: Crea el archivo de configuración de la base de datos en `config/database.php`.
