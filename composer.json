@@ -1,7 +1,21 @@
 {
-  "autoload": {
-    "psr-4": {
-      "App\\": "app/"
-    }
-  }
+    "name": "ggest/gym-app",
+    "description": "Aplicativo para la gestion de Gimnasio",
+    "type": "project",
+    "require-dev": {
+        "phpunit/phpunit": "^11.1"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ggest\\GymApp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Gonzalo Estévez",
+            "email": "gonzalomartinestevez@gmail.com"
+        }
+    ],
+    "require": {}
 }
