@@ -10,9 +10,10 @@ Este sistema está diseñado para administrar clientes en un gimnasio, permitien
 
 ## Tecnologías Utilizadas
 
-- PHP
+- PHP 7.4+
 - MySQL
 - Apache (XAMPP)
+- Composer (opcional)
 
 ## Configuración Local
 
