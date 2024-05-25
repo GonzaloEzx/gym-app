@@ -19,7 +19,7 @@ class AuthController
                 $_SESSION['username'] = $user->username;
                 $_SESSION['role'] = $user->role;
 
-                header('Location: /dashboard');
+                header('Location: /dashboard/admin');
                 exit();
             } else {
                 $error = 'Invalid username or password';
